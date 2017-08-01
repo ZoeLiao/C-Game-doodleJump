@@ -1,4 +1,5 @@
 # C_Geme_doodleJump
+
 #include <SFML/Graphics.hpp>//畫面設計
 #include <SFML/Audio.hpp>//嵌入音樂
 #include <time.h>
