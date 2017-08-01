@@ -27,10 +27,10 @@ int main()
     
     //設置texture，將圖片輸入
     Texture t1,t2,t3,t4;
-    t1.loadFromFile("/Users/appleuser/Desktop/PD/PD/images/background.png");
-    t2.loadFromFile("/Users/appleuser/Desktop/PD/PD/images/platform.png");
-    t3.loadFromFile("/Users/appleuser/Desktop/PD/PD/images/doodleLeft.png");
-    t4.loadFromFile("/Users/appleuser/Desktop/PD/PD/images/coin.png");
+    t1.loadFromFile("路徑.background.png");
+    t2.loadFromFile("路徑.platform.png");
+    t3.loadFromFile("路徑.doodleLeft.png");
+    t4.loadFromFile("路徑.coin.png");
     
     Sprite sBackground(t1), sPlat(t2), sPers(t3),sCoin(t4);
 
@@ -40,7 +40,7 @@ int main()
     string floorNum;
     int tempScore = 0;
 
-    if (!font.loadFromFile("/Users/appleuser/Desktop/PD/PD/sansation.ttf"))
+    if (!font.loadFromFile("路徑.sansation.ttf"))
     {
         return EXIT_FAILURE;
     }
@@ -48,23 +48,23 @@ int main()
     
     //輸入音樂
     Music backgroundMusic;//背景音樂
-    if (!backgroundMusic.openFromFile("/Users/appleuser/Desktop/PD/PD/Reference/Happy_Home.ogg"))
+    if (!backgroundMusic.openFromFile("路徑.背景音樂.ogg"))
     {
         return EXIT_FAILURE;
     }
     Music jumpMusic;//doodle跳躍時的音樂
-    if (!jumpMusic.openFromFile("/Users/appleuser/Desktop/PD/PD/Reference/jump.ogg"))
+    if (!jumpMusic.openFromFile("路徑.跳躍時的音樂.ogg"))
     {
         return EXIT_FAILURE;
     }
     Music coinMusic;//doodle吃硬幣時的音樂
-    if (!coinMusic.openFromFile("/Users/appleuser/Desktop/PD/PD/Reference/coin.ogg"))
+    if (!coinMusic.openFromFile("路徑.吃硬幣時的音樂.ogg"))
     {
         return EXIT_FAILURE;
     }
     
     Music gameOverMusic;//gameover音樂
-    if (!gameOverMusic.openFromFile("/Users/appleuser/Desktop/PD/PD/Reference/gameOver.ogg"))
+    if (!gameOverMusic.openFromFile("路徑.gameOver.ogg"))
     {
         return EXIT_FAILURE;
     }
@@ -99,7 +99,7 @@ int main()
         if (Keyboard::isKeyPressed(Keyboard::Right) && x<350)//doodle往右但不會超出左右邊界
         {
             x+=3;
-            t3.loadFromFile("/Users/appleuser/Desktop/PD/PD/images/doodleRight.png");//臉轉向右
+            t3.loadFromFile("路徑.doodleRight.png");//臉轉向右
         }
         
         if (Keyboard::isKeyPressed(Keyboard::Left) && -30<x)//doodle往左但不會超出左右邊界
